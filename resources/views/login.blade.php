@@ -24,7 +24,7 @@
         .navbar-logo img {
             padding: 2px;
             padding-left: 10px;
-            width: 40px; 
+            width: 50px; 
             height: 40px;
         }
         .navbar a {
