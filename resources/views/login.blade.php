@@ -9,6 +9,8 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            background-image: url('{{ asset('images/background.jpg') }}');
+
         }
         .navbar {
             background-color: #FF7360;
@@ -62,7 +64,7 @@
 <body>
     <div class="navbar">
         <div class="navbar-logo">
-            <img src="school_1.png">
+            <img src="{{ URL ('images/school_1.png') }}" alt="">
         </div>
         <div class="navbar-links">
             <a href="#">Home</a>
