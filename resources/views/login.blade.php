@@ -1,23 +1,82 @@
 @extends('layout')
 @section('title', 'Login')
 @section('content')
-    <h1>SIGN IN</h1>
-    <div class="container">
-    <form style="width: 500px">
-        <div class="mb-3">
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder= "EMAIL">
+    <title>Login Page</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #FF7360;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-logo img {
+            padding: 2px;
+            padding-left: 10px;
+            width: 40px; 
+            height: 40px;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .login-container {
+            width: 300px;
+            margin: 50px auto 0; 
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            height: 30px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .login-container input[type="submit"] {
+            background-color: #FF7360;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="school_1.png">
         </div>
-    <div class="mb-3">
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder= "PASSWORD">
+        <div class="navbar-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
     </div>
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <div class="login-container">
+        <h2>Sahabat Mahasiswa</h2>
+        <h2>Login</h2>
+        <form action="process_login.php" method="POST">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="submit" value="Login">
+        </form>
     </div>
-    <button type=signin class="btn btn-primary">Sign In</button>
-    <button type=signingoogle class="btn btn-secondary">Sign In With Google</button>
-    </form>
-    </div>
-
-
 @endsection
