@@ -136,7 +136,7 @@
         <h2>Login</h2>
         <form action="process_login.php" method="POST">
             <div class="username">
-                    <input type="text" placeholder="Username" name="Masukan Username">
+            <input type="text" placeholder="Username@student.telkomuniversity.ac.id" name="Masukan Username">
                 </div>
                 <div class="password">
                     <input type="password" placeholder="Password" name="Masukan Password">
