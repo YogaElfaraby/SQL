@@ -13,14 +13,15 @@ body {
 .navbar {
     background-color: #FF7360;
     color: #fff;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed; 
     width: 100%;
-    height: fit-content;
     top: 0;
     z-index: 1000; 
+    display: flex;
 }
 
 .navbar-logo img {
@@ -30,10 +31,10 @@ body {
     height: 50px;
 }
 
-.navbar-title { 
-    color: #ffffff;
-    padding-left: 150px;
-    
+.navbar-title {
+    display: flex; 
+    align-items: center; 
+    margin-left: 10px;
 }
 
 .navbar a {
