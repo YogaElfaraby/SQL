@@ -10,6 +10,8 @@
             padding: 0;
             background-color: #f4f4f4;
             background-image: url('{{ asset('images/background.jpg') }}');
+            background-repeat: no-repeat;
+            background-size: cover;
 
         }
         .navbar {
@@ -59,6 +61,64 @@
             border-radius: 3px;
         }
 
+        h2 {
+        line-height: 5px;
+        }
+
+        input {
+            margin-top: 20px;
+            margin-bottom: -10px;
+            padding: 5px;
+            align-items: center;
+            width: 250px;
+        }
+
+        input:focus {
+            background-color: #f1aca3;
+        }
+
+        input:hover {
+            color: #f1aca3;
+            transition: border-color 0.5s, color 0.5s;
+        }
+
+        .username input[type="text"]:hover {
+            border-bottom: solid #f1aca3;
+        }
+
+        .password input[type="password"]:hover {
+            border-bottom: solid #f1aca3;
+        }
+
+        .username input[type="text"] {
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: 3px solid #ddd;
+            font-size: 16px;
+        }
+
+        .password input[type="password"] {
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: 3px solid #ddd;
+            font-size: 16px;
+        }
+
+        .button .btn:hover {
+            background-color: #f1aca3;
+            cursor: pointer;
+            color: #ddd;
+        }
+
+        .button .btn {
+            height: 40px;
+            width: 70px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
     </style>
 </head>
 <body>
@@ -73,12 +133,17 @@
         </div>
     </div>
     <div class="login-container">
-        <h2>Sahabat Mahasiswa</h2>
         <h2>Login</h2>
         <form action="process_login.php" method="POST">
-            <input type="text" name="username" placeholder="Username" required><br>
-            <input type="password" name="password" placeholder="Password" required><br>
-            <input type="submit" value="Login">
+            <div class="username">
+                    <input type="text" placeholder="Username" name="Masukan Username">
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="Password" name="Masukan Password">
+                </div>
+                <div class="button">
+                    <input type="submit" class="btn" value="Login">
+                </div>
         </form>
     </div>
 @endsection
