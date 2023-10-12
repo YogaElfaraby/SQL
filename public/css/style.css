@@ -1,0 +1,123 @@
+body {
+    background-image: url('/images/background.jpg');
+    background-size: cover;
+    font-family: 'arial';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.navbar {
+    background-color: #FF7360;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    width: 100%;
+    height: fit-content;
+    top: 0;
+    z-index: 1000; 
+}
+
+.navbar-logo img {
+    padding: 0px;
+    padding-left: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.navbar-title { 
+    color: #ffffff;
+    padding-left: 150px;
+    
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.Box {
+    background:rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    height: 250px;
+    text-align: center;
+    margin-top: 60px; 
+}
+
+.Box2 {
+    background:rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+    width: 900px;
+    height: 500px;
+    text-align: center;
+    margin-top: 60px; 
+}
+h2 {
+    line-height: 5px;
+}
+
+input {
+    margin-top: 20px;
+    margin-bottom: -10px;
+    padding: 5px;
+    align-items: center;
+    width: 250px;
+}
+
+input:focus {
+    background-color: #f1aca3;
+}
+
+input:hover {
+    color: #f1aca3;
+    transition: border-color 0.5s, color 0.5s;
+}
+
+.username input[type="text"]:hover {
+    border-bottom: solid #f1aca3;
+}
+
+.password input[type="password"]:hover {
+    border-bottom: solid #f1aca3;
+}
+
+.username input[type="text"] {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 3px solid #ddd;
+    font-size: 16px;
+}
+
+.password input[type="password"] {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 3px solid #ddd;
+    font-size: 16px;
+}
+
+.button .btn:hover {
+    background-color: #f1aca3;
+    cursor: pointer;
+    color: #ddd;
+}
+
+.button .btn {
+    height: 40px;
+    width: 70px;
+    background-color: #fff;
+    border-radius: 5px;
+}
