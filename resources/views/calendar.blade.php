@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css" >
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://kit.fontawesome.com/83e3234794.js" crossorigin="anonymous"></script>
 </head>
 
@@ -35,7 +35,7 @@
                         Menu
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <a href="/dashboard" class="sidebar-link">
                             <i class="fa-solid fa-list"></i>
                             Dashboard
                         </a>
@@ -65,7 +65,7 @@
                                 <a href="/calendar" class="sidebar-link">Calender</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="/AddSchedule" class="sidebar-link ">Add Schedule</a>
+                                <a href="/AddSchedule" class="sidebar-link">Add Schedule</a>
                             </li>
                         </ul>
                     </li>
@@ -126,57 +126,6 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
-                    </div>
-                    <!-- Table -->
-                    <div class="card border-0">
-                        <div class="card-header">
-                            <h5 class="card-title">
-                                Today Schedule
-                            </h5>
-                            <h6 class="card-subtitle text-mute">
-                                July, 26
-                            </h6>
-                        </div>
-                        <div class="card-body">
-                            <table class="table">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Start</th>
-                                    <th scope="col">End</th>
-                                    <th scope="col"> </th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th scope="row">1</th>
-                                    <td>Proting</td>
-                                    <td>09:00</td>
-                                    <td>11:00</td>
-                                    <td><button onclick = "deleteTask()" class="text-bg-danger" style="border-radius: 6px;"><i class="fa-solid fa-trash"></i> Delete</button></td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">2</th>
-                                    <td>IMK</td>
-                                    <td>12:00</td>
-                                    <td>15:00</td>
-                                    <td><button onclick = "deleteTask()" class="text-bg-danger" style="border-radius: 6px;"><i class="fa-solid fa-trash"></i> Delete</button></td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">3</th>
-                                    <td>solat</td>
-                                    <td>15:00</td>
-                                    <td>15:30</td>
-                                    <td><button onclick = "deleteTask()" class="text-bg-danger" style="border-radius: 6px;"><i class="fa-solid fa-trash"></i> Delete</button></td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">4</th>
-                                    <td colspan="3"><a href="/AddSchedule" style="color: green;"> Add Schedule</a></td>
-                                  </tr>
-                                </tbody>
-                              </table>
                         </div>
                     </div>
                 </div>

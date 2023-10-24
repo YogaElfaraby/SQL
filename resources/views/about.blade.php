@@ -7,9 +7,9 @@
 <body>
     <div class="navbar">
         <div class="navbar-logo">
-            <img src="images/school_1.png">
-        </div>
-        <div class="navbar-title">
+            <div class="img">
+                <img src="images/school_1.png">
+            </div>
             <h1>Sahabat Mahasiswa</h1>
         </div>
         <div class="navbar-links">
