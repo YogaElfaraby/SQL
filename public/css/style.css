@@ -158,11 +158,6 @@ a.sidebar-link{
     }
 }
 
-.login-background {
-    background-image: url('/images/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 
 
@@ -210,8 +205,13 @@ a.sidebar-link{
     text-align: center;
     margin-top: 60px; 
 }
+
+.box-area{
+    width: 930px;
+}
 h2 {
     line-height: 5px;
+    margin-bottom: 50px;
 }
 
 input {
