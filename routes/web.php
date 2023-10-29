@@ -27,10 +27,6 @@ Route::get('/about', function() {
     return view('about');
 });
 
-Route::get('/AddSchedule', function() {
-    return view('AddSchedule');
-});
+Route::get('/AddSchedule', 'App\Http\Controllers\AddScheduleController@index');
+Route::get('/calendar', 'App\Http\Controllers\CalendarController@index');
 
-Route::get('/calendar', function() {
-    return view('calendar');
-});
