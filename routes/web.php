@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\TaskController;
+use App\Http\Controllers\CalendarController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,19 +15,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('login');
-});
-Route::get('/login', function(){
-    return view('login');
-});
-Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('welcome');
 });
 
-Route::get('/about', function() {
-    return view('about');
+Route::resource('tasks', 'App\Http\Controllers\TaskController');
+Route::get('/dashboard', [TaskController::class, 'index']);
+Route::get('/dashboard/AddSchedule', [TaskController::class, 'create']);
+Route::post('/dashboard/store', [TaskController::class, 'store']);
+Route::get('/dashboard/{id}/EditSchedule', [TaskController::class, 'edit']);
+Route::put('/dashboard/{id}', [TaskController::class, 'update']);
+Route::delete('/dashboard/{id}', [TaskController::class, 'delete']);
+Route::get('/dashboard/{id}', [TaskController::class, 'show']);
+Route::get('/calendar', [CalendarController::class, 'calendar']);
+
+Route::get('/iframe', function () {
+    return view('calendar.iframe'); 
 });
-
-Route::get('/AddSchedule', 'App\Http\Controllers\AddScheduleController@index');
-Route::get('/calendar', 'App\Http\Controllers\CalendarController@index');
-

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>AddSchedule</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/83e3234794.js" crossorigin="anonymous"></script>
 </head>
 
@@ -16,30 +16,19 @@
             <!-- content for sidebar -->
             <div class="h-100">
                 <div class="sidebar-logo">
-                    <a href="#">Sahabat Mahasiswa</a>
+                    <a href="#">
+                        <img src="assets/image/Logo_Panjang.png" alt="logo" style="width: 10vw;">
+                    </a>
                 </div>
                 <ul class="sidebar-nav">
                     <li class="sidebar-header">
                         Menu
                     </li>
                     <li class="sidebar-item">
-                        <a href="/dashboard" class="sidebar-link">
+                        <a href="#" class="sidebar-link">
                             <i class="fa-solid fa-list"></i>
                             Dashboard
                         </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse" aria-expanded="false"><i class="fa-regular fa-file pe-2"></i>
-                            My Day
-                        </a>
-                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Page 1</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Page 2</a>
-                            </li>
-                        </ul>
                     </li>
                     <li class="sidebar-item">
                         <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse" aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
@@ -47,13 +36,26 @@
                         </a>
                         <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Scedule</a>
+                                <a href="#" class="sidebar-link">Schedule</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="/calendar" class="sidebar-link">Calender</a>
+                                <a href="calender.html" class="sidebar-link">Calender</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="/AddSchedule" class="sidebar-link">Add Schedule</a>
+                                <a href="#" class="sidebar-link">Add Schedule</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse" aria-expanded="false"><i class="fa-regular fa-file pe-2"></i>
+                            Settings
+                        </a>
+                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Feedback</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Change Language</a>
                             </li>
                         </ul>
                     </li>
@@ -69,7 +71,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-items dropdown">
                             <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
-                                <img src="images/heru.jpg" class="avatar img-fluid rounded" alt="">
+                                <img src="image/heru.jpg" class="avatar img-fluid rounded" alt="">
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <a href="#" class="dropdown-item">Profile</a>
@@ -89,24 +91,21 @@
                             </h5>
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form action="/dashboard/store" method="POST">
+                                @csrf
                                 <div class="form-group">
                                     <label for="NamaJad">Name</label>
-                                    <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter Nama">
-                                  </div>
+                                    <input type="text" class="form-control" placeholder="Enter Nama" name="name">
+                                </div>
                                 <div class="form-group">
-                                    <label for="tanggal">Date</label>
-                                    <input type="date" class="form-control" id="tanggal" aria-describedby="date">
-                                  </div>
-                                  <div class="form-group">
                                     <label for="time">start time</label>
-                                    <input type="time" class="form-control" id="sTime" aria-describedby="sTime">
-                                  </div>
-                                  <div class="form-group">
+                                    <input type="datetime-local" class="form-control" name="start_time">
+                                </div>
+                                <div class="form-group">
                                     <label for="time">end time</label>
-                                    <input type="time" class="form-control" id="eTime" aria-describedby="eTime">
-                                  </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                    <input type="datetime-local" class="form-control" name="end_time">
+                                </div>
+                                <button type="submit" class="btn btn-primary" name="submit">Submit</button>
                               </form>
                         </div>
                     </div>
@@ -115,6 +114,6 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
