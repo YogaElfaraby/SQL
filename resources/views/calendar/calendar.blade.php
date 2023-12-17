@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/83e3234794.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+
+
 </head>
 
 <body>
@@ -35,7 +38,7 @@
                         </a>
                         <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Schedule</a>
+                                <a href="/dashboard" class="sidebar-link">Schedule</a>
                             </li>
                             <li class="sidebar-item">
                                 <a href="#" class="sidebar-link">Calender</a>
@@ -51,7 +54,7 @@
                         </a>
                         <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Feedback</a>
+                                <a href="/feeback" class="sidebar-link">Feedback</a>
                             </li>
                             <li class="sidebar-item">
                                 <a href="#" class="sidebar-link">Change Language</a>
@@ -81,16 +84,24 @@
                     </ul>
                 </div>
             </nav>
-            <div style="display: flex; justify-content: center; align-items: center; height: 92vh;">
-                <iframe src="{{ url('/iframe') }}" height="861" width="1000" id="calendar" scrolling="no"></iframe>
-            </div>
+            <div id='calendar'></div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        
-    </script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                // FullCalendar options
+                initialView: 'dayGridMonth',
+                events: '/events'
+            });
+
+            calendar.render();
+        });
+</script>
 </body>
 </html>

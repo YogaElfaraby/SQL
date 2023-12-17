@@ -38,10 +38,10 @@
                                 <a href="#" class="sidebar-link">Schedule</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Calender</a>
+                                <a href="/calendar" class="sidebar-link">Calender</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="/dashboard/AddSchedule" class="sidebar-link">Add Schedule</a>
+                                <a href="/AddSchedule" class="sidebar-link">Add Schedule</a>
                             </li>
                         </ul>
                     </li>
@@ -148,7 +148,7 @@
                                                             <td>{{ $t->name }}</td>
                                                             <td>{{ $t->start_time }}</td>
                                                             <td>{{ $t->end_time }}</td>
-                                                            <td><a href="/dashboard/{{$t->id}}/EditSchedule" class="btn btn-primary">edit</a></td>
+                                                            <td><a href="/edit-{{$t->id}}" class="btn btn-primary">edit</a></td>
                                                             <td>
                                                             <form action="/dashboard/{{$t->id}}" method="POST">
                                                                     @csrf
@@ -159,7 +159,7 @@
                                                         </tr>
                                                     @endforeach
                                                         <tr>
-                                                            <a href="/dashboard/AddSchedule">
+                                                            <a href="/AddSchedule">
                                                                 <i class="fa fa-plus" aria-hidden="true"></i> Add New Task
                                                             </a> 
                                                         </tr>

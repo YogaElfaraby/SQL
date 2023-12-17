@@ -11,9 +11,8 @@
 </head>
 
 <body>
-    <div class="wrapper">
+<div class="wrapper">
         <aside id="sidebar">
-            <!-- content for sidebar -->
             <div class="h-100">
                 <div class="sidebar-logo">
                     <a href="#">
@@ -25,7 +24,7 @@
                         Menu
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <a href="/dashboard" class="sidebar-link">
                             <i class="fa-solid fa-list"></i>
                             Dashboard
                         </a>
@@ -39,10 +38,10 @@
                                 <a href="#" class="sidebar-link">Schedule</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="calender.html" class="sidebar-link">Calender</a>
+                                <a href="#" class="sidebar-link">Calender</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Add Schedule</a>
+                                <a href="/dashboard/AddSchedule" class="sidebar-link">Add Schedule</a>
                             </li>
                         </ul>
                     </li>
@@ -71,7 +70,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-items dropdown">
                             <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
-                                <img src="image/heru.jpg" class="avatar img-fluid rounded" alt="">
+                                <img src="assets/image/heru.jpg" class="avatar img-fluid rounded" alt="">
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <a href="#" class="dropdown-item">Profile</a>

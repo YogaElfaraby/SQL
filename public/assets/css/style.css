@@ -190,10 +190,15 @@ a.sidebar-link{
     font-weight: bolder;
 }
 
-/* footer and nav */
+#calendar {
+    width: 65%;
+    margin: 0 auto; 
+}
 
-@media (max-width:767.98px){
-    .navbar, footer{
-        width: 100vw;
+@media (max-width: 768px) {
+    #calendar {
+        width: 100%;
     }
 }
+
+/* footer and nav */

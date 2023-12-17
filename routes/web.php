@@ -17,17 +17,15 @@ use App\Http\Controllers\CalendarController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/AddSchedule', [TaskController::class, 'create']);
 Route::resource('tasks', 'App\Http\Controllers\TaskController');
 Route::get('/dashboard', [TaskController::class, 'index']);
-Route::get('/dashboard/AddSchedule', [TaskController::class, 'create']);
 Route::post('/dashboard/store', [TaskController::class, 'store']);
-Route::get('/dashboard/{id}/EditSchedule', [TaskController::class, 'edit']);
+Route::get('/edit-{id}', [TaskController::class, 'edit']);
 Route::put('/dashboard/{id}', [TaskController::class, 'update']);
 Route::delete('/dashboard/{id}', [TaskController::class, 'delete']);
 Route::get('/dashboard/{id}', [TaskController::class, 'show']);
-Route::get('/calendar', [CalendarController::class, 'calendar']);
+Route::get('/calendar', [CalendarController::class, 'index']);
+Route::get('/events', [CalendarController::class, 'events']);
 
-Route::get('/iframe', function () {
-    return view('calendar.iframe'); 
-});
+
